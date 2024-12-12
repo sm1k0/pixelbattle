@@ -1,7 +1,8 @@
 /* PixelBattle.css */
+
 body {
   margin: 0;
-  font-family: 'Roboto', Arial, sans-serif; /* Используем шрифт Roboto */
+  font-family: 'Roboto', Arial, sans-serif;
   background-color: #e3f2fd;
   color: #1e88e5;
   display: flex;
@@ -16,18 +17,20 @@ body {
   padding: 20px;
   border-radius: 10px;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  width: 90%; /* Делаем ширину гибкой */
+  max-width: 800px;
 }
 
 .title {
   margin: 0;
   padding: 10px;
-  font-size: 28px; /* Увеличиваем размер шрифта */
-  font-weight: 700; /* Делаем шрифт жирным */
+  font-size: 24px; /* Уменьшаем для маленьких экранов */
+  font-weight: 700;
 }
 
 .toolbar {
   margin: 15px 0;
-  font-weight: 500; /* Немного утолщаем шрифт */
+  font-weight: 500;
 }
 
 .grid-container {
@@ -56,11 +59,12 @@ body {
 .content {
   display: flex;
   justify-content: space-between;
+  flex-direction: column; /* Перестраиваем в столбик */
 }
 
 .left-panel {
   flex: 3;
-  margin-right: 20px;
+  margin-right: 0;
 }
 
 .right-panel {
@@ -69,6 +73,7 @@ body {
   border: 2px solid #1e88e5;
   border-radius: 10px;
   padding: 10px;
+  margin-top: 20px; /* Добавляем отступ между панелями */
 }
 
 .chat {
@@ -93,34 +98,68 @@ body {
   padding: 5px;
   background: #e3f2fd;
   border-radius: 3px;
-  font-weight: 500; /* Немного утолщаем шрифт */
+  font-weight: 500;
 }
 
 .chat-form {
   display: flex;
-  gap: 5px;
+  flex-direction: column; /* Перестраиваем поля в столбик */
+  gap: 10px;
 }
 
 .chat-form input {
   flex: 1;
   padding: 10px;
   font-size: 16px;
-  font-weight: 500; /* Немного утолщаем шрифт */
+  font-weight: 500;
   border: 1px solid #ddd;
   border-radius: 5px;
 }
 
 .chat-form button {
-  padding: 10px 20px;
+  padding: 10px;
   background: #1e88e5;
   color: white;
   border: none;
   border-radius: 5px;
   cursor: pointer;
   font-size: 16px;
-  font-weight: 700; /* Делаем кнопку жирной */
+  font-weight: 700;
 }
 
 .chat-form button:hover {
   background: #1565c0;
+}
+
+/* Адаптивные стили для маленьких экранов */
+@media (max-width: 768px) {
+  .battle-container {
+    padding: 10px;
+  }
+
+  .title {
+    font-size: 20px; /* Уменьшаем размер заголовка */
+  }
+
+  .content {
+    flex-direction: column; /* Располагаем панели вертикально */
+  }
+
+  .grid-container {
+    padding: 5px;
+    border-width: 2px; /* Уменьшаем толщину границ */
+  }
+
+  .chat-form button {
+    font-size: 14px; /* Уменьшаем размер текста в кнопке */
+    padding: 8px; /* Уменьшаем внутренние отступы */
+  }
+
+  .chat {
+    height: 300px; /* Уменьшаем высоту чата */
+  }
+
+  .chat-messages {
+    font-size: 14px; /* Уменьшаем текст сообщений */
+  }
 }
