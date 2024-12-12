@@ -46,8 +46,8 @@ function PixelBattle() {
     const now = new Date().getTime();
     const lastPaintTime = Cookies.get("lastPaintTime");
 
-    if (lastPaintTime && now - lastPaintTime < 300000) {
-      addNotification("Вы можете рисовать только раз в 5 минут!", "warning");
+    if (lastPaintTime && now - lastPaintTime < 3000) {
+      addNotification("Вы можете рисовать только раз в 3 сек!", "warning");
       return;
     }
 
