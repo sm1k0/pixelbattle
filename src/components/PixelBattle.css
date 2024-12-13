@@ -128,56 +128,5 @@ body {
   background: #1565c0;
 }
 
-/* Адаптивные стили для планшетов */
-@media (max-width: 1024px) {
-  .content {
-    flex-direction: column; /* Перестраиваем в столбик */
-  }
 
-  .left-panel {
-    margin-right: 0;
-    margin-bottom: 20px;
-  }
-
-  .right-panel {
-    margin-top: 0;
-  }
-}
-
-/* Адаптивные стили для телефонов */
-@media (max-width: 768px) {
-  .battle-container {
-    padding: 10px;
-  }
-
-  .title {
-    font-size: 20px; /* Уменьшаем размер заголовка */
-  }
-
-  .content {
-    flex-direction: column; /* Располагаем панели вертикально */
-  }
-
-  .grid-container {
-    padding: 5px;
-    border-width: 2px; /* Уменьшаем толщину границ */
-  }
-
-  .chat-form {
-    flex-direction: column; /* Поля чата в столбик */
-    gap: 5px;
-  }
-
-  .chat-form button {
-    font-size: 14px;
-    padding: 8px;
-  }
-
-  .chat {
-    height: 300px; /* Уменьшаем высоту чата */
-  }
-
-  .chat-messages {
-    font-size: 14px; /* Уменьшаем текст сообщений */
-  }
 }
