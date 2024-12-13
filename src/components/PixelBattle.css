@@ -24,7 +24,7 @@ body {
 .title {
   margin: 0;
   padding: 10px;
-  font-size: 24px; /* Уменьшаем для маленьких экранов */
+  font-size: 28px; /* Размер шрифта для ноутбуков */
   font-weight: 700;
 }
 
@@ -59,12 +59,11 @@ body {
 .content {
   display: flex;
   justify-content: space-between;
-  flex-direction: column; /* Перестраиваем в столбик */
 }
 
 .left-panel {
   flex: 3;
-  margin-right: 0;
+  margin-right: 20px;
 }
 
 .right-panel {
@@ -73,7 +72,6 @@ body {
   border: 2px solid #1e88e5;
   border-radius: 10px;
   padding: 10px;
-  margin-top: 20px; /* Добавляем отступ между панелями */
 }
 
 .chat {
@@ -103,7 +101,6 @@ body {
 
 .chat-form {
   display: flex;
-  flex-direction: column; /* Перестраиваем поля в столбик */
   gap: 10px;
 }
 
@@ -117,7 +114,7 @@ body {
 }
 
 .chat-form button {
-  padding: 10px;
+  padding: 10px 20px;
   background: #1e88e5;
   color: white;
   border: none;
@@ -131,7 +128,23 @@ body {
   background: #1565c0;
 }
 
-/* Адаптивные стили для маленьких экранов */
+/* Адаптивные стили для планшетов */
+@media (max-width: 1024px) {
+  .content {
+    flex-direction: column; /* Перестраиваем в столбик */
+  }
+
+  .left-panel {
+    margin-right: 0;
+    margin-bottom: 20px;
+  }
+
+  .right-panel {
+    margin-top: 0;
+  }
+}
+
+/* Адаптивные стили для телефонов */
 @media (max-width: 768px) {
   .battle-container {
     padding: 10px;
@@ -150,9 +163,14 @@ body {
     border-width: 2px; /* Уменьшаем толщину границ */
   }
 
+  .chat-form {
+    flex-direction: column; /* Поля чата в столбик */
+    gap: 5px;
+  }
+
   .chat-form button {
-    font-size: 14px; /* Уменьшаем размер текста в кнопке */
-    padding: 8px; /* Уменьшаем внутренние отступы */
+    font-size: 14px;
+    padding: 8px;
   }
 
   .chat {
